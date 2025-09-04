@@ -1,1 +1,197 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Seções */
+section {
+    padding: 40px 0;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* Seção Introdução */
+#introducao .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#introducao .texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+#introducao .midia {
+    flex: 1;
+    min-width: 300px;
+}
+
+#introducao img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Seção Conteúdos */
+.modulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.modulo {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s ease;
+}
+
+.modulo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modulo h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.video-count {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.modulo ul {
+    list-style-type: none;
+}
+
+.modulo li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.modulo li:before {
+    content: "•";
+    color: #3498db;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Seção SETEC */
+#setec .setec-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.setec-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.setec-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.setec-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #introducao .conteudo,
+    #setec .setec-content {
+        flex-direction: column;
+    }
+    
+    .modulos {
+        grid-template-columns: 1fr;
+    }
+}
