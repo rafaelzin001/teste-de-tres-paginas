@@ -4,7 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica e Inteligência Artificial</title>
-    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #1a2530);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Seções */
+        section {
+            padding: 40px 0;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: #3498db;
+            margin: 20px 0 15px;
+        }
+        
+        /* Seção Introdução */
+        #introducao .conteudo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        #introducao .texto {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        #introducao .midia {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        #introducao img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        /* Seção Conteúdos */
+        .modulos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .modulo {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .modulo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modulo h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .video-count {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .modulo-video {
+            margin-top: 15px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .modulo-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .modulo ul {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+        
+        .modulo li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .modulo li:before {
+            content: "•";
+            color: #3498db;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* Seção SETEC */
+        #setec .setec-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .setec-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .setec-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .setec-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        /* Rodapé */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            #introducao .conteudo,
+            #setec .setec-content {
+                flex-direction: column;
+            }
+            
+            .modulos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,15 +236,21 @@
             <h2>Curso de Desenvolvimento de Sistema</h2>
             <div class="conteudo">
                 <div class="texto">
-                    <p>
-                        
-                    </p>
-                   
+                    <p>O curso de Desenvolvimento de Sistemas com foco em Robótica e Inteligência Artificial oferece uma formação completa para os profissionais do futuro. Combinando teoria e prática, os alunos aprendem a desenvolver sistemas inteligentes e soluções tecnológicas inovadoras.</p>
+                    <p>Nossa abordagem integra conhecimentos de programação, eletrônica, machine learning e inteligência artificial para capacitar os estudantes a criarem soluções reais para problemas complexos.</p>
+                    <h3>O que você vai aprender:</h3>
+                    <ul>
+                        <li>Programação de sistemas embarcados</li>
+                        <li>Desenvolvimento de algoritmos de IA</li>
+                        <li>Integração entre software e hardware</li>
+                        <li>Projetos práticos de robótica</li>
+                        <li>Ética e responsabilidade na tecnologia</li>
+                    </ul>
                 </div>
                 <div class="midia">
                     <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Robótica+e+IA" alt="Robótica e Inteligência Artificial">
                     <div class="video-container">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/icrXkrxsJO8?si=GM9mNkMHUC4K2dry" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/icrXkrxsJO8?si=GM9mNkMHUC4K2dry" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -41,39 +264,57 @@
                 <div class="modulo">
                     <h3>Introdução à Robótica</h3>
                     <p class="video-count">Vídeos: 8</p>
+                    <div class="modulo-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <ul>
-                     <a href="https://youtu.be/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj">
-            <img src="https://img.youtube.com/vi/8rZ3SJpO7j68GEIj/maxresdefault.jpg"/>
-           </a>
+                        <li>História e evolução da robótica</li>
+                        <li>Componentes básicos de um robô</li>
+                        <li>Sensores e atuadores</li>
+                        <li>Programação básica de robôs</li>
                     </ul>
                 </div>
+                
                 <div class="modulo">
                     <h3>Fundamentos de IA</h3>
                     <p class="video-count">Vídeos: 10</p>
+                    <div class="modulo-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ujTtm--_K-U?si=JQb0P5wQhQ9q3U9C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <ul>
-                         <a href="https://youtu.be/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj">
-            <img src="https://img.youtube.com/vi/8rZ3SJpO7j68GEIj/maxresdefault.jpg"/>
-           </a>
+                        <li>Introdução à inteligência artificial</li>
+                        <li>Algoritmos de busca e otimização</li>
+                        <li>Lógica fuzzy e sistemas especialistas</li>
+                        <li>Redes neurais artificiais</li>
                     </ul>
                 </div>
+                
                 <div class="modulo">
                     <h3>Aprendizado de Máquina</h3>
                     <p class="video-count">Vídeos: 12</p>
+                    <div class="modulo-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/I7NrVwm3apg?si=YQv2WQJ3vDqQ9q0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <ul>
-                        <a href="https://youtu.be/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj">
-            <img src="https://img.youtube.com/vi/8rZ3SJpO7j68GEIj/maxresdefault.jpg"/>
-           </a>
+                        <li>Algoritmos de classificação</li>
+                        <li>Regressão e clustering</li>
+                        <li>Deep learning</li>
+                        <li>Processamento de linguagem natural</li>
                     </ul>
                 </div>
+                
                 <div class="modulo">
                     <h3>Robótica Avançada</h3>
                     <p class="video-count">Vídeos: 9</p>
+                    <div class="modulo-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4lzLh-_Ftyo?si=Q8U9s1Qy3wX0Yw9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <ul>
-                          <a href="https://youtu.be/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj">
-            <img src="https://img.youtube.com/vi/8rZ3SJpO7j68GEIj/maxresdefault.jpg"/>
-           </a>
+                        <li>Visão computacional para robótica</li>
+                        <li>Navegação autônoma</li>
+                        <li>Robótica colaborativa</li>
+                        <li>ROS (Robot Operating System)</li>
                     </ul>
-                </div>
                 </div>
             </div>
         </div>
