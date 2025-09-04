@@ -8,8 +8,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #e6f7ff 0%, #f0f8ff 100%);
+    min-height: 100vh;
 }
 
 .container {
@@ -21,48 +22,72 @@ body {
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: #fff;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     opacity: 0.9;
+    font-weight: 300;
 }
 
-/* Seções */
+/* Seções - Estilos Gerais */
 section {
-    padding: 40px 0;
-    margin: 20px 0;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 50px 0;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,  䀀 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: #2c3e50;
-    font-size: 2rem;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid;
 }
 
 h3 {
-    color: #3498db;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
 }
 
-/* Seção Introdução */
+/* Seção Introdução - Azul/Verde Água */
+#introducao {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d1e9f9 100%);
+    border-left: 6px solid #3498db;
+}
+
+#introducao h2 {
+    color: #2980b9;
+    border-bottom-color: #3498db;
+}
+
+#introducao h3 {
+    color: #2c3e50;
+}
+
 #introducao .conteudo {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 35px;
 }
 
 #introducao .texto {
@@ -77,8 +102,9 @@ h3 {
 
 #introducao img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .video-container {
@@ -86,6 +112,8 @@ h3 {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .video-container iframe {
@@ -94,62 +122,116 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Seção Conteúdos */
+/* Seção Conteúdos - Azul/Púrpura */
+#conteudos {
+    background: linear-gradient(135deg, #e8eaf6 0%, #e3f2fd 100%);
+    border-left: 6px solid #5c6bc0;
+}
+
+#conteudos h2 {
+    color: #3949ab;
+    border-bottom-color: #5c6bc0;
+}
+
 .modulos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
 .modulo {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #3498db;
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #5c6bc0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .modulo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    background: white;
 }
 
 .modulo h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
+    color: #3949ab;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
 }
 
 .video-count {
     font-weight: bold;
-    color: #3498db;
-    margin-bottom: 10px;
+    color: #5c6bc0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    background: rgba(92, 107, 192, 0.1);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.modulo-video {
+    margin: 18px 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modulo-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .modulo ul {
     list-style-type: none;
+    margin-top: 15px;
 }
 
 .modulo li {
-    padding: 5px 0;
+    padding: 8px 0;
     border-bottom: 1px dashed #ddd;
+    position: relative;
+    padding-left: 20px;
 }
 
 .modulo li:before {
-    content: "•";
-    color: #3498db;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    content: "➤";
+    color: #5c6bc0;
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
 }
 
-/* Seção SETEC */
+/* Seção SETEC - Azul Escuro/Cinza Azulado */
+#setec {
+    background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%);
+    border-left: 6px solid #455a64;
+}
+
+#setec h2 {
+    color: #37474f;
+    border-bottom-color: #455a64;
+}
+
+#setec h3 {
+    color: #263238;
+}
+
 #setec .setec-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 35px;
 }
 
 .setec-info {
@@ -160,30 +242,74 @@ h3 {
 .setec-image {
     flex: 1;
     min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .setec-image img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.setec-image img:hover {
+    transform: scale(1.03);
+}
+
+#setec ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+#setec li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #b0bec5;
+    position: relative;
+    padding-left: 25px;
+}
+
+#setec li:before {
+    content: "✦";
+    color: #455a64;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
 }
 
 /* Rodapé */
 footer {
-    background: #2c3e50;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-radius: 8px 8px 0 0;
+}
+
+footer p {
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
         width: 95%;
+        padding: 15px;
     }
     
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+    
+    header p {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
     }
     
     #introducao .conteudo,
@@ -193,5 +319,10 @@ footer {
     
     .modulos {
         grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 35px 0;
+        margin: 25px 0;
     }
 }
