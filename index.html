@@ -49,7 +49,6 @@
         section {
             padding: 40px 0;
             margin: 20px 0;
-            background: #fff;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -57,16 +56,23 @@
         h2 {
             text-align: center;
             margin-bottom: 30px;
-            color: #2c3e50;
             font-size: 2rem;
         }
         
         h3 {
-            color: #3498db;
             margin: 20px 0 15px;
         }
         
-        /* Seção Motivos */
+        /* Seção 1 - Azul Escuro */
+        #motivos {
+            background: linear-gradient(135deg, #1a5276, #154360);
+            color: white;
+        }
+        
+        #motivos h2, #motivos h3 {
+            color: white;
+        }
+        
         #motivos .motivos-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -74,24 +80,33 @@
         }
         
         .motivo-item {
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.1);
             padding: 25px;
             border-radius: 8px;
             border-left: 4px solid #3498db;
             transition: transform 0.3s ease;
+            backdrop-filter: blur(5px);
         }
         
         .motivo-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .motivo-item h3 {
+        /* Seção 2 - Azul Claro */
+        #videos-ia {
+            background: linear-gradient(135deg, #d6eaf8, #aed6f1);
             color: #2c3e50;
-            margin-bottom: 15px;
         }
         
-        /* Seção Vídeos IA */
+        #videos-ia h2 {
+            color: #2c3e50;
+        }
+        
+        #videos-ia h3 {
+            color: #1a5276;
+        }
+        
         #videos-ia .videos-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -99,7 +114,7 @@
         }
         
         .video-item {
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 8px;
             transition: transform 0.3s ease;
@@ -129,10 +144,18 @@
         
         .video-item h3 {
             text-align: center;
-            color: #2c3e50;
         }
         
-        /* Seção SETEC */
+        /* Seção 3 - Preta */
+        #setec {
+            background: linear-gradient(135deg, #1c1c1c, #000000);
+            color: white;
+        }
+        
+        #setec h2, #setec h3 {
+            color: white;
+        }
+        
         #setec .setec-content {
             display: flex;
             flex-wrap: wrap;
@@ -152,6 +175,32 @@
         .setec-image img {
             width: 100%;
             border-radius: 8px;
+            border: 2px solid #3498db;
+        }
+        
+        .setec-image p {
+            margin-top: 10px;
+            text-align: center;
+            font-style: italic;
+            color: #ccc;
+        }
+        
+        #setec ul {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+        
+        #setec li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        #setec li:last-child {
+            border-bottom: none;
+        }
+        
+        #setec strong {
+            color: #3498db;
         }
         
         /* Rodapé */
@@ -192,7 +241,7 @@
         </div>
     </header>
 
-    <!-- Seção 1: Motivos para fazer o curso -->
+    <!-- Seção 1: Motivos para fazer o curso (Azul Escuro) -->
     <section id="motivos">
         <div class="container">
             <h2>Por que fazer o curso de Desenvolvimento de Sistemas?</h2>
@@ -217,7 +266,7 @@
         </div>
     </section>
 
-    <!-- Seção 2: Vídeos sobre IA na programação -->
+    <!-- Seção 2: Vídeos sobre IA na programação (Azul Claro) -->
     <section id="videos-ia">
         <div class="container">
             <h2>IA na Programação: O Futuro do Desenvolvimento</h2>
@@ -250,7 +299,7 @@
         </div>
     </section>
 
-    <!-- Seção 3: IA nos jogos (SETEC) -->
+    <!-- Seção 3: IA nos jogos (SETEC) (Preta) -->
     <section id="setec">
         <div class="container">
             <h2>SETEC - IA na Indústria de Jogos</h2>
