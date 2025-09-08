@@ -4,224 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica e Inteligência Artificial</title>
-    <style>
-        /* Estilos gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(135deg, #2c3e50, #1a2530);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Seções */
-        section {
-            padding: 40px 0;
-            margin: 20px 0;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            font-size: 2rem;
-        }
-        
-        h3 {
-            color: #3498db;
-            margin: 20px 0 15px;
-        }
-        
-        /* Seção Introdução */
-        #introducao .conteudo {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        #introducao .texto {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        #introducao .midia {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        #introducao img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
-        
-        /* Seção Conteúdos */
-        .modulos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .modulo {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            transition: transform 0.3s ease;
-        }
-        
-        .modulo:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .modulo h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .video-count {
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 10px;
-        }
-        
-        .modulo-video {
-            margin-top: 15px;
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-        }
-        
-        .modulo-video iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
-        
-        .modulo ul {
-            list-style-type: none;
-            margin-top: 15px;
-        }
-        
-        .modulo li {
-            padding: 5px 0;
-            border-bottom: 1px dashed #ddd;
-        }
-        
-        .modulo li:before {
-            content: "•";
-            color: #3498db;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        
-        /* Seção SETEC */
-        #setec .setec-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .setec-info {
-            flex: 2;
-            min-width: 300px;
-        }
-        
-        .setec-image {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .setec-image img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        
-        /* Rodapé */
-        footer {
-            background: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            #introducao .conteudo,
-            #setec .setec-content {
-                flex-direction: column;
-            }
-            
-            .modulos {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -240,7 +23,11 @@
                     <p>Nossa abordagem integra conhecimentos de programação, eletrônica, machine learning e inteligência artificial para capacitar os estudantes a criarem soluções reais para problemas complexos.</p>
                     <h3>O que você vai aprender:</h3>
                     <ul>
-                    
+                        <li>Programação de robôs e sistemas autônomos</li>
+                        <li>Fundamentos de Inteligência Artificial e Machine Learning</li>
+                        <li>Desenvolvimento de algoritmos para visão computacional</li>
+                        <li>Integração de sistemas robóticos com IA</li>
+                        <li>Projeto e implementação de soluções tecnológicas inovadoras</li>
                     </ul>
                 </div>
                 <div class="midia">
@@ -253,73 +40,87 @@
         </div>
     </section>
 
-    <section id="conteudos">
+    <!-- Nova seção: Motivos para fazer o curso de robótica -->
+    <section id="motivos">
         <div class="container">
-            <h2>Conteúdos Educacionais</h2>
-            <div class="modulos">
-                <div class="modulo">
-                    <h3>Introdução à Robótica</h3>
-                    <p class="video-count">Vídeos: 8</p>
-                    <div class="modulo-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <ul>
-                     
-                    </ul>
+            <h2>Por que fazer o curso de Robótica?</h2>
+            <div class="motivos-content">
+                <div class="motivo-item">
+                    <h3>Mercado em Expansão</h3>
+                    <p>A robótica é uma das áreas que mais crescem no mundo tecnológico, com alta demanda por profissionais qualificados e salários competitivos.</p>
                 </div>
-                
-                <div class="modulo">
-                    <h3>Fundamentos de IA</h3>
-                    <p class="video-count">Vídeos: 10</p>
-                    <div class="modulo-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ujTtm--_K-U?si=JQb0P5wQhQ9q3U9C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <ul>
-                   
+                <div class="motivo-item">
+                    <h3>Aprendizado Multidisciplinar</h3>
+                    <p>Você desenvolverá conhecimentos em programação, eletrônica, mecânica e inteligência artificial, tornando-se um profissional completo.</p>
                 </div>
-                
-                <div class="modulo">
-                    <h3>Aprendizado de Máquina</h3>
-                    <p class="video-count">Vídeos: 12</p>
-                    <div class="modulo-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/I7NrVwm3apg?si=YQv2WQJ3vDqQ9q0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <ul>
-                       
-                    </ul>
+                <div class="motivo-item">
+                    <h3>Inovação e Criatividade</h3>
+                    <p>A robótica permite transformar ideias em soluções tangíveis, criando projetos inovadores que podem impactar positivamente a sociedade.</p>
                 </div>
-                
-                <div class="modulo">
-                    <h3>Robótica Avançada</h3>
-                    <p class="video-count">Vídeos: 9</p>
-                    <div class="modulo-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4lzLh-_Ftyo?si=Q8U9s1Qy3wX0Yw9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <ul>
-            
-                    </ul>
+                <div class="motivo-item">
+                    <h3>Preparação para o Futuro</h3>
+                    <p>Com a automação e Industria 4.0, os conhecimentos em robótica serão essenciais para as carreiras do futuro.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Nova seção: Vídeos sobre IA -->
+    <section id="videos-ia">
+        <div class="container">
+            <h2>Vídeos sobre Inteligência Artificial</h2>
+            <div class="videos-container">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ujTtm--_K-U?si=JQb0P5wQhQ9q3U9C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h3>Introdução à IA</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/I7NrVwm3apg?si=YQv2WQJ3vDqQ9q0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h3>Machine Learning</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4lzLh-_Ftyo?si=Q8U9s1Qy3wX0Yw9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h3>Redes Neurais</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V2POyQVQuzA?si=8rZ3SJpO7j68GEIj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h3>Ética na IA</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova seção: IA nos Jogos na SETEC -->
     <section id="setec">
         <div class="container">
-            <h2>SETEC e o Futuro da Tecnologia</h2>
+            <h2>SETEC - Feira de Tecnologia</h2>
             <div class="setec-content">
                 <div class="setec-info">
-                    <h3>SETEC - Secretaria de Educação Profissional e Tecnológica</h3>
-                    <p>A SETEC tem um papel fundamental na formação de profissionais para atuar nas áreas de robótica e inteligência artificial, desenvolvendo currículos e diretrizes que acompanham as inovações tecnológicas.</p>
+                    <h3>Inteligência Artificial nos Jogos</h3>
+                    <p>A SETEC, como feira de tecnologia, sempre destaca as inovações em IA aplicadas ao desenvolvimento de jogos. Esta área tem revolucionado a indústria de games, criando experiências mais imersivas e realistas para os jogadores.</p>
                     
-                    <p>Através de iniciativas e programas educacionais, a SETEC busca preparar os estudantes para os desafios do mercado de trabalho do futuro, com foco em competências técnicas e socioemocionais necessárias para atuar na indústria 4.0.</p>
+                    <p>Na última edição da SETEC, foram apresentados projetos incríveis onde algoritmos de IA são utilizados para:</p>
                     
-                    <h3>Tendências Futuras:</h3>
                     <ul>
-                   
+                        <li>Criação de personagens com comportamentos realistas e adaptativos</li>
+                        <li>Geração procedural de conteúdos e mundos infinitos</li>
+                        <li>Sistemas de aprendizado que se adaptam ao estilo de jogo do usuário</li>
+                        <li>Detecção de emoções para personalizar a experiência do jogo</li>
+                        <li>NPCs (personagens não jogadores) com diálogos inteligentes</li>
                     </ul>
+                    
+                    <p>Estes avanços mostram como a IA está transformando não apenas a jogabilidade, mas toda a indústria de entretenimento digital, criando experiências personalizadas e dinâmicas que respondem às ações dos jogadores em tempo real.</p>
                 </div>
                 <div class="setec-image">
-                    <img src="https://placehold.co/400x300/3498db/ffffff?text=SETEC+Tecnologia" alt="SETEC e Tecnologia">
+                    <img src="https://placehold.co/400x500/3498db/ffffff?text=IA+nos+Jogos+SETEC" alt="IA nos Jogos na SETEC">
                 </div>
             </div>
         </div>
